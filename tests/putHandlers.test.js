@@ -1,12 +1,19 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
-const requestBody = {}
+const requestBody = {
+  "productsList": [
+    {
+      "id": 1,
+      "quantity": 3
+    }
+  ]
+}
 
 test('Should return status code 200 ok', async () => {
 let actualStatusCode;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/orders/16`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/8`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -20,10 +27,10 @@ let actualStatusCode;
          expect(actualStatusCode).toBe(200);
 });
 
-test('Response body should show product cost', async () => {
+test('Response body should return true', async () => {
     let actualResponseBody;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/orders/16`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/8`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -34,5 +41,5 @@ test('Response body should show product cost', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-         expect(actualResponseBody["productsCost"]).toBe(11);
+         expect(actualResponseBody["ok"]).toBe(true);
 });
