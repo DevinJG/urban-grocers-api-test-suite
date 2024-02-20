@@ -32,10 +32,10 @@ To run the tests for this project, follow these steps:
 
 ### Task 3: Tests for PUT Requests
 
-- Endpoint Tested: `/api/v1/orders/16`
+- Endpoint Tested: `/api/v1/kits/8`
 - Description: Tests check the response status code and verify that the response body reflects the updated order information, including product cost.
 
 ### Task 4: Tests for DELETE Requests
 
-- Endpoint Tested: `/api/v1/kits/10`
+- Endpoint Tested: `/api/v1/kits/8`
 - Description: Tests validate the response status code and ensure that the response body contains the expected boolean value indicating the success of the deletion.
