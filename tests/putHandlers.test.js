@@ -5,7 +5,7 @@ const requestBody = {
   "productsList": [
     {
       "id": 1,
-      "quantity": 3
+      "quantity": 1
     }
   ]
 }
@@ -13,7 +13,7 @@ const requestBody = {
 test('Should return status code 200 ok', async () => {
 let actualStatusCode;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/8`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/10`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ let actualStatusCode;
 test('Response body should return true', async () => {
     let actualResponseBody;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/8`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/10`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
